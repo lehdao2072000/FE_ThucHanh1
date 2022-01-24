@@ -1,0 +1,325 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family:"Source Sans Pro";
+}
+/*các định dạng màn hình*/
+.container{
+	max-width: 1170px;
+	margin: 0px auto;
+}
+.content{
+
+	background-color: #cad3d3;
+}
+
+.table-container{
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+}
+.left, .center, .right{
+	margin: 10% auto;
+	width:  33.33%;
+}
+@media (max-width: 850px) {
+	.table-container{
+		flex-direction: column;
+	}
+	.left, .center, .right{
+		width: 33.33%;
+		margin: 15px auto;
+	}
+}
+
+.left .circle{
+	text-align: center;
+	background-color: white;
+	border-radius: 60px;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	z-index: 1;
+	position: relative;
+	padding-top: 1px;
+}
+.left .circle p{
+	font-size: 32px;
+	color: #2196f7;
+	margin-bottom: 0px;
+}
+.left .circle p+p{
+	margin-top: 0px;
+	font-size: 16px;
+	color: #99a9b5;
+}
+
+.left .content{
+	margin-top: -60px;
+	width:  360px;
+	height:  270px;
+	background-image: url("Images/ocean.png");
+	background-repeat: no-repeat;
+	background-size: 360px 270px;
+	text-align: center;
+	padding-top: 60px;
+}
+.left .content p{
+	font-family: "Montserrat UltraLight";
+	font-size: 36px;
+	color: white;
+}
+.left .content p+p{
+	font-size: 14px;
+	color: #b6c6c9;
+}
+.left .noidung{
+	margin-top: -25px;
+	height: 500px;
+	width: 360px;
+	text-align: center;
+	background-color: white;
+	padding-top: 1px;
+}
+.left .noidung p{
+	margin-top: 26px;
+	font-size: 24px;
+	color: #5f727f;
+	margin-bottom: 7px;
+}
+.left .noidung p+p{
+	margin-top: 7px;
+	margin-bottom: 26px;
+	font-size: 14px;
+	color: #99a9b5;
+}
+.left .noidung td{
+	width: 360px;
+	height: 50px;
+	color: #7d8c97;
+	font-size: 16px;
+}
+.left .noidung tr:nth-child(odd){
+	background-color: #f4f6f7;
+}
+.left .noidung tr:nth-child(even){
+	background-color: white;
+}
+
+.left .noidung a{
+	margin: 50px auto;
+	display: block;
+	width:  170px;
+	height:  50px;
+	text-decoration: none;
+	color: #2196f7;
+	border: 2px solid #2196f7;
+	font-size: 19px;
+	line-height: 50px;
+}
+.left .noidung a:hover{
+	background: #2196f7;
+	color: white;
+}
+/*Nội dung giữa*/
+
+.center .new{
+	text-align: center;
+	width: 65px;
+	height: 65px;
+	background-image: url("Images/newmark.png");
+	background-repeat: no-repeat;
+	margin-top: 40px;
+	margin-left: -10px;
+	float: left;
+}
+.center .new p{
+	font-size: 12px;
+	color: white;
+	font-weight: 700;
+	padding-top: 10px;
+}
+.center .circle{
+	text-align: center;
+	background-color: #2c2e3d;
+	border-radius: 60px;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	z-index: 1;
+	position: relative;
+	padding-top: 1px;
+}
+.center .circle p{
+	font-size: 32px;
+	color: #d74498;
+	margin-bottom: -5px;
+}
+.center .circle p+p{
+	margin-top: -5px;
+	font-size: 16px;
+	color: #99a9b5;
+}
+
+.center .content{
+	margin-top: -60px;
+	height:  270px;
+	width:  360px;
+	background-image: url("Images/mountain.png");
+	background-repeat: no-repeat;
+	background-size: 360px 270px;
+	text-align: center;
+	padding-top: 60px;
+}
+.center .content p{
+	font-family: "Montserrat UltraLight";
+	font-size: 36px;
+	color: white;
+	margin-bottom: -10px;
+}
+.center .content p+p{
+	font-size: 14px;
+	color: #b6c6c9;
+}
+.center .noidung{
+	height: 500px;
+	text-align: center;
+	margin-top: -25px;
+	background-color: white;
+	padding-top: 1px;
+	width: 360px;
+}
+.center .noidung p{
+	margin-top: 26px;
+	font-size: 24px;
+	color: #5f727f;
+	margin-bottom: 7px;
+}
+.center .noidung p+p{
+	margin-top: 7px;
+	margin-bottom: 26px;
+	font-size: 14px;
+	color: #99a9b5;
+}
+.center .noidung td{
+	width: 360px;
+	height: 50px;
+	color: #7d8c97;
+	font-size: 16px;
+}
+.center .noidung tr:nth-child(odd){
+	background-color: #f4f6f7;
+}
+.center .noidung tr:nth-child(even){
+	background-color: white;
+}
+
+.center .noidung a{
+	margin: 50px auto;
+	display: block;
+	width:  170px;
+	height:  50px;
+	text-decoration: none;
+	color: #6c136f;
+	border: 2px solid #6c136f;
+	font-size: 19px;
+	line-height: 50px;
+}
+.center .noidung a:hover{
+	background: #6c136f;
+	color: white;
+}
+/* Nội dung right*/
+
+.right .circle{
+	text-align: center;
+	background-color: white;
+	border-radius: 60px;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	z-index: 1;
+	position: relative;
+	padding-top: 1px;
+}
+.right .circle p{
+	font-size: 32px;
+	color: #32ad1e;
+	margin-bottom: 0px;
+}
+.right .circle p+p{
+	margin-top: 0px;
+	font-size: 16px;
+	color: #99a9b5;
+}
+
+.right .content{
+	margin-top: -60px;
+	height:  270px;
+	width:  360px;
+	background-image: url("Images/forest.png");
+	background-repeat: no-repeat;
+	background-size: 360px 270px;
+	text-align: center;
+	padding-top: 60px;
+}
+.right .content p{
+	font-family: "Montserrat UltraLight";
+	font-size: 36px;
+	color: white;
+}
+.right .content p+p{
+	font-size: 14px;
+	color: #b6c6c9;
+}
+.right .noidung{
+	height: 500px;
+	text-align: center;
+	margin-top: -25px;
+	background-color: white;
+	padding-top: 1px;
+	width: 360px;
+}
+.right .noidung p{
+	margin-top: 26px;
+	font-size: 24px;
+	color: #5f727f;
+	margin-bottom: 7px;
+}
+.right .noidung p+p{
+	margin-top: 7px;
+	margin-bottom: 26px;
+	font-size: 14px;
+	color: #99a9b5;
+}
+.right .noidung td{
+	width: 360px;
+	height: 50px;
+	color: #7d8c97;
+	font-size: 16px;
+}
+.right .noidung tr:nth-child(odd){
+	background-color: #f4f6f7;
+}
+.right .noidung tr:nth-child(even){
+	background-color: white;
+}
+
+.right .noidung a{
+	margin: 50px auto;
+	display: block;
+	width:  170px;
+	height:  50px;
+	text-decoration: none;
+	color: #32ad1e;
+	border: 2px solid #32ad1e;
+	font-size: 19px;
+	line-height: 50px;
+}
+.right .noidung a:hover{
+	background: #32ad1e;
+	color: white;
+}
