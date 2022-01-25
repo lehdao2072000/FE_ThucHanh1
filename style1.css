@@ -70,7 +70,7 @@ body{
 .heading p+p{
 	font-size: 14px;
 }
-.noidung{
+.content1{
 	margin-top: -25px;
 	height: 500px;
 	width: 360px;
@@ -78,28 +78,28 @@ body{
 	background-color: white;
 	padding-top: 1px;
 }
-.noidung p{
+.content1 p{
 	margin-top: 26px;
 	font-size: 24px;
 	color: #5f727f;
 	margin-bottom: 7px;
 }
-.noidung p+p{
+.content1 p+p{
 	margin-top: 7px;
 	margin-bottom: 26px;
 	font-size: 14px;
 	color: #99a9b5;
 }
-.noidung td{
+.content1 td{
 	width: 360px;
 	height: 50px;
 	color: #7d8c97;
 	font-size: 16px;
 }
-.noidung tr:nth-child(odd){
+.content1 tr:nth-child(odd){
 	background-color: #f4f6f7;
 }
-.noidung tr:nth-child(even){
+.content1 tr:nth-child(even){
 	background-color: white;
 }
 .content1 a{
@@ -122,21 +122,21 @@ body{
 	color: #99a9b5;
 }
 
-.left .content{
+.left .left_heading{
 	background-image: url("Images/ocean.png");
 }
-.content p{
+.heading p{
 	color: white;
 }
-.content p+p{
+.heading p+p{
 	color: #b6c6c9;
 }
 
-.noidung a{
+.left_content a{
 	color: #2196f7;
 	border: 2px solid #2196f7;
 }
-.noidung a:hover{
+.left_content a:hover{
 	background: #2196f7;
 	color: white;
 }
@@ -168,15 +168,15 @@ body{
 	color: #99a9b5;
 }
 
-.center .content{
+.center .center_heading{
 	background-image: url("Images/mountain.png");
 }
 
-.center .noidung a{
+.center .center_content a{
 	color: #6c136f;
 	border: 2px solid #6c136f;
 }
-.center .noidung a:hover{
+.center .center_content a:hover{
 	background: #6c136f;
 	color: white;
 }
@@ -192,14 +192,14 @@ body{
 	color: #99a9b5;
 }
 
-.right .content{
+.right .right_heading{
 	background-image: url("Images/forest.png");
 }
-.right .noidung a{
+.right .right_content a{
 	color: #32ad1e;
 	border: 2px solid #32ad1e;
 }
-.right .noidung a:hover{
+.right .right_content a:hover{
 	background: #32ad1e;
 	color: white;
 }
