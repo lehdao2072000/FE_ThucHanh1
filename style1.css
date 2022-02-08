@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/*Định dạng màn hình*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro";
+  background-color: #cad3d3;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.column3, .column2, .column1 {
+  margin: 5% auto;
+}
+
+@media (max-width: 800px) {
+  .table-container {
+    flex-direction: column;
+  }
+
+  .column1,
+.column2,
+.column3 {
+    margin: 15px auto;
+  }
+}
+.circle-item {
+  border-radius: 60px;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  padding-top: 1px;
+  text-align: center;
+  box-shadow: 1px 2px 1px #cad3d3;
+}
+.circle-item p {
+  font-size: 32px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+.circle-item p + p {
+  margin-top: 0px;
+  font-size: 16px;
+}
+
+.heading {
+  background-repeat: no-repeat;
+  background-size: 360px 270px;
+  text-align: center;
+  padding-top: 60px;
+  margin-top: -60px;
+  width: 360px;
+  height: 270px;
+}
+.heading p {
+  font-family: "Montserrat UltraLight";
+  font-size: 36px;
+}
+.heading p + p {
+  font-size: 14px;
+}
+
+.content {
+  margin-top: -25px;
+  min-height: 500px;
+  width: 360px;
+  text-align: center;
+  background-color: white;
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
+.content p {
+  margin-top: 26px;
+  font-size: 24px;
+  color: #5f727f;
+  margin-bottom: 7px;
+}
+.content p + p {
+  margin-top: 7px;
+  margin-bottom: 26px;
+  font-size: 14px;
+  color: #99a9b5;
+}
+.content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content ul li {
+  height: 50px;
+  line-height: 50px;
+  color: #7d8c97;
+  font-size: 16px;
+}
+.content ul li:nth-child(odd) {
+  background-color: #f4f6f7;
+}
+.content ul li:nth-child(even) {
+  background-color: white;
+}
+.content a {
+  margin: 50px auto;
+  display: block;
+  width: 170px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 19px;
+  line-height: 50px;
+}
+
+/* nội dung 3 cột */
+.column1 .column-item {
+  background-color: white;
+}
+.column1 .column-item p {
+  color: #2196f7;
+}
+.column1 .column-item p + p {
+  color: #99a9b5;
+}
+.column1 .column1-heading {
+  background-image: url("Images/ocean.png");
+}
+.column1 .heading p {
+  color: white;
+}
+.column1 .heading p + p {
+  color: #b6c6c9;
+}
+.column1 .column1-content a {
+  color: #2196f7;
+  border: 2px solid #2196f7;
+}
+.column1 .column1-content a:hover {
+  background: #2196f7;
+  color: white;
+}
+
+.column2 .column2-new {
+  text-align: center;
+  width: 65px;
+  height: 65px;
+  background-image: url("Images/newmark.png");
+  background-repeat: no-repeat;
+  margin-top: 40px;
+  margin-left: -10px;
+  float: left;
+}
+.column2 .column2-new p {
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+  padding-top: 10px;
+}
+.column2 .column-item {
+  background-color: #2c2e3d;
+}
+.column2 .column-item p {
+  color: #d74498;
+}
+.column2 .column-item p + p {
+  color: #99a9b5;
+}
+.column2 .column2-heading {
+  background-image: url("Images/mountain.png");
+}
+.column2 .column2-content a {
+  color: #6c136f;
+  border: 2px solid #6c136f;
+}
+.column2 .column2-content a:hover {
+  background: #6c136f;
+  color: white;
+}
+
+.column3 .column-item {
+  background-color: white;
+}
+.column3 .column-item p {
+  color: #32ad1e;
+}
+.column3 .column-item p + p {
+  color: #99a9b5;
+}
+.column3 .column3-heading {
+  background-image: url("Images/forest.png");
+}
+.column3 .column3-content a {
+  color: #32ad1e;
+  border: 2px solid #32ad1e;
+}
+.column3 .column3-content a:hover {
+  background: #32ad1e;
+  color: white;
+}
+
+/*# sourceMappingURL=style1.css.map */
