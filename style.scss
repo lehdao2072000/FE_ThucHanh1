@@ -1,0 +1,237 @@
+$myBackround-color: #cad3d3;
+$myFont: "Source Sans Pro";
+
+/*Định dạng màn hình*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $myFont;
+    background-color: $myBackround-color;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+%margin {
+    margin: 5% auto;
+}
+
+.column1 {
+    @extend %margin;
+}
+
+.column2 {
+    @extend %margin;
+}
+
+.column3 {
+    @extend %margin;
+}
+
+@media (max-width: 800px) {
+    .table-container {
+        flex-direction: column;
+    }
+    .column1,
+    .column2,
+    .column3 {
+        margin: 15px auto;
+    }
+}
+
+.circle-item {
+    border-radius: 60px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    padding-top: 1px;
+    text-align: center;
+    box-shadow: 1px 2px 1px #cad3d3;
+    p {
+        font-size: 32px;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+    }
+    p+p {
+        margin-top: 0px;
+        font-size: 16px;
+    }
+}
+
+.heading {
+    background-repeat: no-repeat;
+    background-size: 360px 270px;
+    text-align: center;
+    padding-top: 60px;
+    margin-top: -60px;
+    width: 360px;
+    height: 270px;
+    p {
+        font-family: "Montserrat UltraLight";
+        font-size: 36px;
+    }
+    p+p {
+        font-size: 14px;
+    }
+}
+
+.content {
+    margin-top: -25px;
+    min-height: 500px;
+    width: 360px;
+    text-align: center;
+    background-color: white;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    p {
+        margin-top: 26px;
+        font-size: 24px;
+        color: #5f727f;
+        margin-bottom: 7px;
+    }
+    p+p {
+        margin-top: 7px;
+        margin-bottom: 26px;
+        font-size: 14px;
+        color: #99a9b5;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            height: 50px;
+            line-height: 50px;
+            color: #7d8c97;
+            font-size: 16px;
+            &:nth-child(odd) {
+                background-color: #f4f6f7;
+            }
+            &:nth-child(even) {
+                background-color: white;
+            }
+        }
+    }
+    a {
+        margin: 50px auto;
+        display: block;
+        width: 170px;
+        height: 50px;
+        text-decoration: none;
+        font-size: 19px;
+        line-height: 50px;
+    }
+}
+
+@mixin myBackground-images($url) {
+    background-image: $url;
+}
+
+
+/* nội dung 3 cột */
+
+@mixin column-item($bgcolor, $color1, $color2) {
+    background-color: $bgcolor;
+    p {
+        color: $color1;
+    }
+    p+p {
+        color: $color2;
+        ;
+    }
+}
+
+@mixin myHeading($color1, $color2) {
+    p {
+        color: $color1;
+    }
+    p+p {
+        color: $color2;
+    }
+}
+
+@mixin column-content($color) {
+    a {
+        color: $color;
+        border: 2px solid $color;
+        &:hover {
+            background: $color;
+            color: white;
+        }
+    }
+}
+
+.column1 {
+    .column-item {
+        @include column-item(white, #2196f7, #99a9b5);
+    }
+    .column1-heading {
+        @include myBackground-images(url("Images/ocean.png"));
+    }
+    .heading {
+        @include myHeading(white,
+        #b6c6c9);
+    }
+    .column1-content {
+        @include column-content(#2196f7);
+    }
+}
+
+.column2 {
+    .column2-new {
+        text-align: center;
+        width: 65px;
+        height: 65px;
+        @include myBackground-images(url("Images/newmark.png"));
+        background-repeat: no-repeat;
+        margin-top: 40px;
+        margin-left: -10px;
+        float: left;
+        p {
+            font-size: 12px;
+            color: white;
+            font-weight: 700;
+            padding-top: 10px;
+        }
+    }
+    .column-item {
+        @include column-item(#2c2e3d,
+        #d74498,
+        #99a9b5);
+    }
+    .column2-heading {
+        @include myBackground-images(url("Images/mountain.png"));
+    }
+    .column2-content {
+        @include column-content(#6c136f);
+    }
+}
+
+.column3 {
+    .column-item {
+        @include column-item(white,
+        #32ad1e,
+        #99a9b5);
+    }
+    .column3-heading {
+        @include myBackground-images(url("Images/forest.png"));
+    }
+    .column3-content {
+        @include column-content(#32ad1e);
+    }
+}
