@@ -1,0 +1,78 @@
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+    .section {
+        .input-text {
+            max-width: 20rem;
+            margin-bottom: 7px;
+        }
+        .button-card {
+            margin-bottom: 7px;
+        }
+        .button-column2 {
+            margin-left: 1rem;
+            .button-card,
+            .button-check {
+                padding: 1rem;
+                height: 5rem;
+            }
+            .button-card {
+                margin-right: 5px;
+            }
+        }
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .article {
+        flex-direction: column;
+        .article-column1,
+        .article-column2,
+        .article-column3,
+        .article-column4 {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .header {
+        justify-content: space-between;
+    }
+    .article {
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .article-column1,
+    .article-column3 {
+        margin-left: 5rem;
+    }
+    .article-column2,
+    .article-column4 {
+        margin-right: 5rem;
+    }
+    .section {
+        .button-column1 {
+            .input-text {
+                max-width: 13rem;
+            }
+        }
+        .button-column2 {
+            display: flex;
+            justify-content: center;
+            .button-card,
+            .button-check {
+                padding: 1rem;
+                height: 5rem;
+            }
+            .button-card {
+                margin-right: 5px;
+            }
+        }
+        .total-calculate_text {
+            margin-bottom: 7px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+$color-nav-menu:#3c3950;
+$mytext-color-blue:#00bcd4;
+$mytext-color-title: #3c3950;
+$mytext-color: #99a9b5;
+$mytext-color-cart: #5f727f;
+$myfont-family:"Montserrat",
+"Source Sans";
+$mybgcolor-nav: #e9f0ef;
+@mixin color-btn($color, $bgcolor, $radius) {
+    color: $color;
+    background-color: $bgcolor;
+    border-radius: $radius;
+    text-align: center;
+}
+
+@mixin magrin-i {
+    margin-right: 1.2rem;
+    width: 16px;
+    height: 16px;
+}
+
+@mixin article-heading {
+    color: white;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        right: -15px;
+        border: 7px solid;
+        border-color: transparent #f50057 transparent transparent;
+        transform: rotate(315deg);
+    }
+}
