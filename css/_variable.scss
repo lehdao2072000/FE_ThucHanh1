@@ -1,0 +1,65 @@
+$color-nav-menu:#3c3950;
+$mytext-color-blue:#00bcd4;
+$mytext-color-title: #3c3950;
+$mytext-color: #99a9b5;
+$mytext-color-cart: #5f727f;
+$mycolor-dfe5e8: #dfe5e8;
+$myfont-family: 'Source Sans Pro',
+'Montserrat';
+$mybgcolor-nav: #e9f0ef;
+@mixin color-btn($color, $bgcolor, $radius) {
+    color: $color;
+    background-color: $bgcolor;
+    border-radius: $radius;
+    text-align: center;
+}
+
+@mixin magrin-i {
+    margin-right: 1.2rem;
+    width: 16px;
+    height: 16px;
+}
+
+@mixin article-heading {
+    color: white;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        right: -15px;
+        border: 7px solid;
+        border-color: transparent #f50057 transparent transparent;
+        transform: rotate(315deg);
+    }
+}
+
+@mixin mx-auto {
+    margin: 0 auto;
+    padding: 0;
+}
+
+@mixin flex-auto ($justify-content, $flex-direction) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+@mixin grid-auto ($columns, $row, $gap) {
+    display: grid;
+    grid-template-columns: $columns $columns $columns;
+    grid-template-rows: $row $row;
+    grid-gap: $gap;
+}
+
+@mixin img-grid ($width, $height) {
+    img {
+        width: $width;
+        height: $height;
+    }
+}
