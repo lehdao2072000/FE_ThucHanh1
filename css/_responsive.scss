@@ -1,4 +1,6 @@
-@media only screen and (max-width: 600px) {
+$width-phone: 600px;
+$width-tablet: 900px;
+@media only screen and (max-width: $width-phone) {
     .header {
         flex-direction: column;
     }
@@ -36,7 +38,7 @@
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: $width-phone) and (max-width: $width-tablet) {
     .header {
         justify-content: space-between;
     }

@@ -1,6 +1,8 @@
 @import 'variable';
 @import 'responsive';
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -17,17 +19,29 @@ body {
     padding: 0;
 }
 
+.links {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
 .header {
     min-height: 4rem;
     background-color: #f4f6f7;
     font-size: 14px;
     line-height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0;
+    @include flex-auto( space-between, row);
+    @include mx-auto();
     color: $mytext-color-cart;
-    border-bottom: 1px solid #dfe5e8;
+    border-bottom: 1px solid $mycolor-dfe5e8;
     font-family: 'Source Sans Pro';
     .header-icon {
         i {
@@ -39,16 +53,11 @@ body {
     }
     .header-link {
         ul {
-            list-style-type: none;
-            padding: 0;
             li {
-                display: inline-block;
                 min-width: 10px;
-                text-align: center;
                 margin-right: 1.2rem;
             }
             a {
-                text-decoration: none;
                 color: $mytext-color-cart;
             }
         }
@@ -70,8 +79,7 @@ body {
 
 .nav {
     background-color: white;
-    display: flex;
-    justify-content: space-between;
+    @include flex-auto( space-between, row);
     margin: 0 auto;
     padding: 1.5rem 0;
     img {
@@ -79,11 +87,8 @@ body {
         height: 40px;
     }
     ul {
-        list-style-type: none;
-        padding: 0;
         li {
             min-width: 3rem;
-            display: inline-block;
             padding: 10px;
             font-size: 14px;
         }
@@ -112,15 +117,13 @@ body {
                 border-bottom: 10px solid transparent;
             }
         }
-         :nth-child(9) {
-            margin-right: 0px;
+        &:last-child {
+            margin-right: 0;
         }
         a {
             font-weight: bold;
             text-transform: uppercase;
-            text-decoration: none;
             font-family: 'Montserrat';
-            text-align: center;
             @include color-btn($mytext-color-title, white, 0);
             &:visited {
                 border: 1px solid $mytext-color-title;
@@ -134,10 +137,8 @@ body {
 
 .section {
     .section-banner {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: #e9f0ef;
+        @include flex-auto( space-between, row);
+        background-color: $mybgcolor-nav;
         .section-banner_link {
             display: inline;
             margin-top: 40px;
@@ -146,23 +147,18 @@ body {
                 max-height: 40px;
             }
             ul {
-                list-style-type: none;
                 margin-top: 90px;
-                padding: 0;
                 li {
                     height: 30px;
                     min-width: 20px;
-                    display: inline-block;
                     font-size: 14px;
                     i {
                         margin: 15px;
-                        color: #5f727f;
+                        color: $mytext-color-cart;
                     }
                 }
                 a {
-                    text-decoration: none;
-                    text-align: center;
-                    @include color-btn($mytext-color-blue, #e9f0ef, 0);
+                    @include color-btn($mytext-color-blue, $mybgcolor-nav, 0);
                     &:hover {
                         color: $mytext-color;
                         border-bottom: 2px solid #ff5252;
@@ -180,7 +176,7 @@ body {
     .section-content {
         p {
             font-size: 24px;
-            color: #5f727f;
+            color: $mytext-color-cart;
             font-family: 'Source Sans Pro';
             font-weight: lighter;
             span {
@@ -191,7 +187,7 @@ body {
         }
         table {
             padding: 0;
-            border: 1px solid #dfe5e8;
+            border: 1px solid $mycolor-dfe5e8;
             a {
                 i {
                     font-size: 25px;
@@ -216,8 +212,7 @@ body {
                     text-align: center;
                 }
                 .table-td_products {
-                    display: flex;
-                    flex-direction: row;
+                    @include flex-auto(flex-start, row);
                     text-align: left;
                     img {
                         margin: auto 0;
@@ -260,7 +255,7 @@ body {
                     .input-form {
                         overflow: hidden;
                         position: relative;
-                        background-color: #dfe5e8;
+                        background-color: $mycolor-dfe5e8;
                         height: 30px;
                         width: 30px;
                         padding: 0;
@@ -294,17 +289,17 @@ body {
             margin: auto 0;
             display: flex;
             justify-content: space-between;
-            border: 1px solid #dfe5e8;
+            border: 1px solid $mycolor-dfe5e8;
             padding: 20px;
             font-size: 19px;
             .button-column1 {
                 .input-text {
                     width: 25rem;
                     padding: 13px;
-                    border: 1px solid #dfe5e8;
+                    border: 1px solid $mycolor-dfe5e8;
                     background-color: #f5f7f6;
                     font-size: 16px;
-                    color: #99a9b5;
+                    color: $mytext-color;
                     border-radius: 3px;
                     text-align: center;
                     font-family: 'Source Sans Pro';
@@ -338,8 +333,7 @@ body {
         }
     }
     .total {
-        display: flex;
-        justify-content: space-between;
+        @include flex-auto( space-between, row);
         margin-top: 3rem;
         .total-calculate {
             h1 {
@@ -351,8 +345,8 @@ body {
             }
             select,
             input {
-                @include color-btn(#99a9b5, white, 3px);
-                border: 1px solid #dfe5e8;
+                @include color-btn($mytext-color, white, 3px);
+                border: 1px solid $mycolor-dfe5e8;
                 font-size: 16px;
             }
             .total-calculate_select {
@@ -387,11 +381,11 @@ body {
             }
             table {
                 tr {
-                    border: 1px solid #dfe5e8;
+                    border: 1px solid $mycolor-dfe5e8;
                     padding: 1rem;
                     .total-cart_column1 {
                         background-color: #f0f3f2;
-                        color: #5f727f;
+                        color: $mytext-color-cart;
                         font-size: 16px;
                         padding: 1rem;
                     }
@@ -400,7 +394,7 @@ body {
                         font-size: 20px;
                         padding: 1rem;
                         form {
-                            color: #5f727f;
+                            color: $mytext-color-cart;
                             font-size: 14px;
                             input[type="radio"] {
                                 -webkit-appearance: none;
@@ -441,14 +435,14 @@ body {
                 width: 160px;
                 margin-right: 2rem;
                 margin-bottom: 1.3rem;
-                border: 1px solid #dfe5e8;
+                border: 1px solid $mycolor-dfe5e8;
                 img {
                     width: 160px;
                     height: 200px;
                 }
                 p {
                     font-family: 'Source Sans Pro';
-                    color: #5f727f;
+                    color: $mytext-color-cart;
                     text-align: center;
                     margin-top: 10px;
                     font-size: 16px;
@@ -469,15 +463,14 @@ body {
 
 .article {
     background-color: #212331;
-    display: flex;
-    justify-content: space-between;
+    @include flex-auto(space-between, row);
     margin-top: 6rem;
     padding-bottom: 6rem;
     padding-top: 6rem;
     .article-column1 {
         width: 260px;
         p {
-            color: #99a9b5;
+            color: $mytext-color;
             font-size: 16px;
             font-family: 'Source Sans Pro';
         }
@@ -492,7 +485,7 @@ body {
                 @include article-heading();
             }
             hr {
-                border-top: 1px dashed #99a9b5;
+                border-top: 1px dashed $mytext-color;
             }
             i {
                 font-size: 20px;
@@ -511,17 +504,15 @@ body {
             }
             ul {
                 margin: 0;
-                padding: 0;
                 li {
-                    list-style-type: none;
-                    border-bottom: 1px dashed #99a9b5;
+                    text-align: left;
+                    border-bottom: 1px dashed $mytext-color;
                     padding: 10px 0;
                     &:nth-child(3) {
                         border: none;
                     }
                 }
                 a {
-                    text-decoration: none;
                     display: flex;
                     flex-direction: row;
                     img {
@@ -533,17 +524,16 @@ body {
                     .column1-recent_masse {
                         font-size: 16px;
                         p {
-                            color: #99a9b5;
+                            color: $mytext-color;
                         }
                         p+p {
                             font-size: 14px;
                             font-family: 'Source Sans Pro';
                             color: $mytext-color-blue;
-                            display: flex;
-                            justify-content: space-between;
+                            @include flex-auto(space-between, row);
                             margin: 0;
                             span {
-                                color: #99a9b5;
+                                color: $mytext-color;
                                 i {
                                     margin-right: 3px;
                                 }
@@ -569,7 +559,7 @@ body {
                 margin: 0;
                 padding: 0;
                 li {
-                    border-bottom: 1px dashed #99a9b5;
+                    border-bottom: 1px dashed $mytext-color;
                     padding: 7px;
                     &::marker {
                         color: $mytext-color-blue;
@@ -579,8 +569,7 @@ body {
                     }
                 }
                 a {
-                    text-decoration: none;
-                    color: #99a9b5;
+                    color: $mytext-color;
                     font-family: 'Source Sans Pro';
                     font-size: 16px;
                     &:hover {
@@ -630,7 +619,7 @@ body {
             button {
                 width: 26rem;
                 padding: 1rem;
-                @include color-btn(#99a9b5, #394050, 3px);
+                @include color-btn($mytext-color, #394050, 3px);
                 text-transform: uppercase;
                 font-family: 'Montserrat';
                 font-size: 14px;
@@ -647,15 +636,9 @@ body {
                 margin-bottom: 3rem;
             }
             .products {
-                display: grid;
-                grid-template-columns: 8rem 8rem 8rem;
-                grid-template-rows: 8rem 8rem;
-                grid-gap: 5px;
+                @include grid-auto(8rem, 8rem, 5px);
             }
-            img {
-                width: 8rem;
-                height: 8rem;
-            }
+            @include img-grid(8rem, 8rem);
         }
     }
     .article-column4 {
@@ -665,14 +648,8 @@ body {
         }
         .article-column4_flick {
             .column4_products {
-                display: grid;
-                grid-template-columns: 8rem 8rem 8rem;
-                grid-template-rows: 8rem 8rem 8rem;
-                grid-gap: 5px;
-                img {
-                    width: 8rem;
-                    height: 8rem;
-                }
+                @include grid-auto(8rem, 8rem, 5px);
+                @include img-grid(8rem, 8rem);
             }
         }
         .article-column4_newslet {
@@ -690,7 +667,7 @@ body {
             }
             p {
                 margin-bottom: 3rem;
-                color: #99a9b5;
+                color: $mytext-color;
                 font-size: 16px;
                 font-family: 'Source Sans Pro';
             }
@@ -723,12 +700,11 @@ body {
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
+    @include flex-auto(space-between, row);
     background-color: #181828;
     padding: 3rem 0;
     p {
-        color: #99a9b5;
+        color: $mytext-color;
         font-family: 'Source Sans Pro';
         font-size: 14px;
         span {
@@ -737,12 +713,8 @@ body {
     }
     .footer-menu {
         ul {
-            li {
-                display: inline-block;
-            }
             a {
-                text-decoration: none;
-                color: #99a9b5;
+                color: $mytext-color;
                 font-size: 14px;
                 font-family: 'Source Sans Pro';
                 padding: 7px;
@@ -770,7 +742,7 @@ body {
             &:nth-child(6) {
                 color: #e54035;
             }
-            &:nth-child(7) {
+            &:last-child {
                 color: #ff5757;
             }
         }
