@@ -1,18 +1,18 @@
 // 1. Viết hàm random(start, end) trả về kết quả là 1 số nguyên trong khoảng start-end
 
 function random(start, end) {
-    let kq = Math.floor(Math.random() * (end - start + 1)) + start;
-    return kq;
+    const result = Math.floor(Math.random() * (end - start + 1)) + start;
+    return result;
 }
 console.log(" 1. số nguyên ngẫu nhiên là " + random(0, 10));
 
 //2. Tạo 1 mảng init gồm 10 phẩn tử ngẫu nhiên lấy từ hàm random
 
-function random2(start, end) {
+function randomListNumber(start, end) {
 
-    let init = [];
+    const init = [];
     for (let i = 0; i < 10; i++) {
-        let value = Math.floor(Math.random() * (end - start + 1)) + start;
+        const value = Math.floor(Math.random() * (end - start + 1)) + start;
         init.push(value);
     }
     return init;
@@ -32,7 +32,7 @@ const array1 = [1, 2, 3, 4, 5];
 //const newArray1 = array1.filter(number => number % 2 != 0);
 function getOddNumbers(array) {
 
-    return array % 2 != 0;
+    return array % 2 !== 0;
 }
 console.log(" 3. Mảng gồm các phần tử lẻ : " + array1.filter(getOddNumbers));
 
@@ -40,7 +40,7 @@ console.log(" 3. Mảng gồm các phần tử lẻ : " + array1.filter(getOddNu
 //input: [1, 2, 3, 4, 5]
 //output: [2, 4, 6, 8, 10]
 const array = [1, 2, 3, 4, 5];
-let double = array.map(function(value) {
+const double = array.map(function(value) {
     return value * 2;
 });
 console.log(" 4. mảng gồm các phần tử là gấp đôi phần tử của mảng array : " + double);
