@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide show</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slides">
+            <img src="Images/anh1.jpg" alt="ảnh lỗi" class="slide">
+            <img src="Images/anh2.jpg" alt="ảnh lỗi" class="slide">
+            <img src="Images/anh3.jpg" alt="ảnh lỗi" class="slide">
+        </div>
+        <button class="btn-color previous" onclick="slidesShow(-1)"><i class="bi bi-caret-left"></i></button>
+        <button class="btn-color next" onclick="slidesShow(1)"><i class="bi bi-caret-right"></i></button>
+        <div class="dots">
+            <span class="dot" onclick="dotsShow(1)"></span>
+            <span class="dot" onclick="dotsShow(2)"></span>
+            <span class="dot" onclick="dotsShow(3)"></span>
+        </div>
+    </div>
+
+    <script src="SlideShow.js"></script>
+</body>
+
+</html>
