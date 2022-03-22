@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  min-height: 300px;
+  margin: 0 auto;
+  background-color: #eeeff0;
+}
+.container .create-posts {
+  margin: 0 auto;
+}
+
+.container-posts {
+  width: 500px;
+  min-height: 300px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #eeeff0;
+}
+.container-posts .post {
+  min-height: 100px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
